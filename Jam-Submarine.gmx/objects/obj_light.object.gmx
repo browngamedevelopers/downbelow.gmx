@@ -55,19 +55,13 @@ lightColor = c_white;
 draw_set_alpha(lightBrightness);
 draw_set_blend_mode(bm_add);
 
-var xOffset = 20;
-var yOffset = -10;
-
+var offset = 22;
 var playerSub = instance_find(obj_Submarine, 0);
 
-show_debug_message(playerSub);
-
-show_debug_message(playerSub.x);
-
 d3d_transform_set_rotation_z(playerSub.image_angle);
-d3d_transform_add_translation(playerSub.x + xOffset, 
-                              playerSub.y + yOffset,0);
-draw_ellipse(0,0,lightLength,lightWidth,false);
+d3d_transform_add_translation(playerSub.x, 
+                              playerSub.y,0);
+draw_ellipse(offset,-lightWidth/2,lightLength,lightWidth/2,false);
 d3d_transform_set_identity();
 
 draw_set_alpha(1);
