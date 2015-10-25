@@ -5,9 +5,18 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\sprSubmarineStill</sprite>
+    <sprite>sprites\sprSubmarineMove</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\objSubmarine</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rmLevel1</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>

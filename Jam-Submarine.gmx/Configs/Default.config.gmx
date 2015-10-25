@@ -21,7 +21,7 @@
     <option_android_arch_x86>true</option_android_arch_x86>
     <option_android_build_version>0</option_android_build_version>
     <option_android_color_depth>0</option_android_color_depth>
-    <option_android_display_name>Project-Jam-Submarine</option_android_display_name>
+    <option_android_display_name>Jam-Submarine</option_android_display_name>
     <option_android_google_analytics_enable>false</option_android_google_analytics_enable>
     <option_android_google_play>false</option_android_google_play>
     <option_android_google_play_id></option_android_google_play_id>
@@ -49,7 +49,7 @@
     <option_android_ouya_icon>Configs\Default\android\icons\ouyaIcon.png</option_android_ouya_icon>
     <option_android_package_company>companyname</option_android_package_company>
     <option_android_package_domain>com</option_android_package_domain>
-    <option_android_package_product>Project-Jam-Submarine</option_android_package_product>
+    <option_android_package_product>Jam-Submarine</option_android_package_product>
     <option_android_permission_flags>8</option_android_permission_flags>
     <option_android_pocketchange_enable>false</option_android_pocketchange_enable>
     <option_android_pocketchange_id></option_android_pocketchange_id>
@@ -81,8 +81,8 @@
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
     <option_fullscreen>false</option_fullscreen>
-    <option_gameguid>{A0D41114-266D-41A1-88E5-0643B048CCA3}</option_gameguid>
-    <option_gameid>447741126</option_gameid>
+    <option_gameguid>{088A7FFA-8DA1-44DF-81B4-801785495548}</option_gameguid>
+    <option_gameid>315956686</option_gameid>
     <option_haptic_effects>false</option_haptic_effects>
     <option_hasloadimage>false</option_hasloadimage>
     <option_helpkey>true</option_helpkey>
@@ -130,7 +130,7 @@
     <option_ios_build_version>0</option_ios_build_version>
     <option_ios_certificate></option_ios_certificate>
     <option_ios_device_type>3</option_ios_device_type>
-    <option_ios_display_name>Project-Jam-Submarine</option_ios_display_name>
+    <option_ios_display_name>Jam-Submarine</option_ios_display_name>
     <option_ios_flurry_enable>false</option_ios_flurry_enable>
     <option_ios_flurry_id></option_ios_flurry_id>
     <option_ios_google_analytics_enable>false</option_ios_google_analytics_enable>
@@ -173,17 +173,17 @@
     <option_ios_texture_page>1024</option_ios_texture_page>
     <option_ios_use_test_ads>false</option_ios_use_test_ads>
     <option_lastchanged></option_lastchanged>
-    <option_linux_display_name>Project-Jam-Submarine</option_linux_display_name>
+    <option_linux_display_name>Jam-Submarine</option_linux_display_name>
     <option_linux_enable_steam>false</option_linux_enable_steam>
     <option_linux_fullscreen>false</option_linux_fullscreen>
-    <option_linux_homepage>http://www.Project-Jam-Submarine.com</option_linux_homepage>
+    <option_linux_homepage>http://www.Jam-Submarine.com</option_linux_homepage>
     <option_linux_icon>Configs\Default\linux\icon64.png</option_linux_icon>
     <option_linux_interpolate>true</option_linux_interpolate>
-    <option_linux_long_desc>Project-Jam-Submarine</option_linux_long_desc>
+    <option_linux_long_desc>Jam-Submarine</option_linux_long_desc>
     <option_linux_maintainer_email></option_linux_maintainer_email>
     <option_linux_scale>-1</option_linux_scale>
     <option_linux_screenkey>true</option_linux_screenkey>
-    <option_linux_short_desc>Project-Jam-Submarine</option_linux_short_desc>
+    <option_linux_short_desc>Jam-Submarine</option_linux_short_desc>
     <option_linux_sizeable>false</option_linux_sizeable>
     <option_linux_splash_png>Configs\Default\linux\splash.png</option_linux_splash_png>
     <option_linux_steam_app_id>0</option_linux_steam_app_id>
@@ -202,7 +202,7 @@
     <option_mac_build_version>0</option_mac_build_version>
     <option_mac_copyright_info>(c)2012 CompanyName Ltd...</option_mac_copyright_info>
     <option_mac_create_app_store>true</option_mac_create_app_store>
-    <option_mac_display_name>Project-Jam-Submarine</option_mac_display_name>
+    <option_mac_display_name>Jam-Submarine</option_mac_display_name>
     <option_mac_enable_steam>false</option_mac_enable_steam>
     <option_mac_fullscreen>false</option_mac_fullscreen>
     <option_mac_icon_png>Configs\Default\mac\icon512.png</option_mac_icon_png>
@@ -210,7 +210,7 @@
     <option_mac_major_version>1</option_mac_major_version>
     <option_mac_menu_dock>false</option_mac_menu_dock>
     <option_mac_minor_version>0</option_mac_minor_version>
-    <option_mac_output_dir>~/GameMaker-Studio/Project-Jam-Submarine</option_mac_output_dir>
+    <option_mac_output_dir>~/GameMaker-Studio/Jam-Submarine</option_mac_output_dir>
     <option_mac_scale>-1</option_mac_scale>
     <option_mac_screenkey>true</option_mac_screenkey>
     <option_mac_showcursor>true</option_mac_showcursor>
@@ -267,7 +267,7 @@
     <option_savekey>true</option_savekey>
     <option_scale>-1</option_scale>
     <option_scaleprogress>true</option_scaleprogress>
-    <option_sci_UseSCI>false</option_sci_UseSCI>
+    <option_sci_UseSCI>0</option_sci_UseSCI>
     <option_sci_serverLocation></option_sci_serverLocation>
     <option_screenkey>true</option_screenkey>
     <option_screenshotkey>true</option_screenshotkey>
@@ -284,9 +284,9 @@
     <option_textureGroup0_targets>$7fffffffffffffff</option_textureGroup0_targets>
     <option_textureGroup_count>1</option_textureGroup_count>
     <option_textureGroups0>Default</option_textureGroups0>
-    <option_tizen_app_id>http://yourdomain/Project-Jam-Submarine</option_tizen_app_id>
+    <option_tizen_app_id>http://yourdomain/Jam-Submarine</option_tizen_app_id>
     <option_tizen_build_version>0</option_tizen_build_version>
-    <option_tizen_display_name>Project-Jam-Submarine</option_tizen_display_name>
+    <option_tizen_display_name>Jam-Submarine</option_tizen_display_name>
     <option_tizen_flurry_enable>false</option_tizen_flurry_enable>
     <option_tizen_flurry_id></option_tizen_flurry_id>
     <option_tizen_google_analytics_enable>false</option_tizen_google_analytics_enable>
@@ -323,7 +323,7 @@
     <option_win8_analytics_id></option_win8_analytics_id>
     <option_win8_build_version>0</option_win8_build_version>
     <option_win8_certificate_location>Windows8_TemporaryKey.pfx</option_win8_certificate_location>
-    <option_win8_display_name>Project-Jam-Submarine</option_win8_display_name>
+    <option_win8_display_name>Jam-Submarine</option_win8_display_name>
     <option_win8_internet_capable>false</option_win8_internet_capable>
     <option_win8_interpolate>true</option_win8_interpolate>
     <option_win8_landscape_allowed>true</option_win8_landscape_allowed>
@@ -392,7 +392,7 @@
     <option_winphone_cycle_wide_image_8>Configs\Default\WinPhone\CycleWide8.png</option_winphone_cycle_wide_image_8>
     <option_winphone_cycle_wide_image_9>Configs\Default\WinPhone\CycleWide9.png</option_winphone_cycle_wide_image_9>
     <option_winphone_description>YourDescription</option_winphone_description>
-    <option_winphone_display_name>Project-Jam-Submarine</option_winphone_display_name>
+    <option_winphone_display_name>Jam-Submarine</option_winphone_display_name>
     <option_winphone_flip_content_back></option_winphone_flip_content_back>
     <option_winphone_flip_content_front></option_winphone_flip_content_front>
     <option_winphone_flip_medium_back_image>Configs\Default\WinPhone\FlipMedBack.png</option_winphone_flip_medium_back_image>
@@ -434,7 +434,7 @@
     <option_xbone_background_colour>#464646</option_xbone_background_colour>
     <option_xbone_build_version>0</option_xbone_build_version>
     <option_xbone_description>Your Description</option_xbone_description>
-    <option_xbone_display_name>Project-Jam-Submarine</option_xbone_display_name>
+    <option_xbone_display_name>Jam-Submarine</option_xbone_display_name>
     <option_xbone_events_manifest_index>-1</option_xbone_events_manifest_index>
     <option_xbone_foreground_text>light</option_xbone_foreground_text>
     <option_xbone_interpolation>true</option_xbone_interpolation>
