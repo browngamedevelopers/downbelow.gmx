@@ -40,6 +40,42 @@ orbitSpeed = 7;
 orbitRange = 50;
 orbitccwise = 1;
 
+
+//code for wandering randomly around an area
+wanderspeed = 3;
+boxwidth = 10;
+boxheight = 10;
+leftwander = x-boxwidth/2;
+rightwander = x+boxwidth/2;
+topwander = y-boxwidth/2;
+bottomwander = y+boxwidth/2;
+targetx = x;
+targety = y;
+
+after_waiting = "wait"
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ai = after_waiting;
 </string>
           </argument>
         </arguments>
@@ -96,20 +132,63 @@ if (ai = "chase"){
   speed = fleeSpeed;
   direction = 180 + dirToFoe;
   alarm[0] = 60;
-  image_angle = direction
+  image_angle = direction;
   
-}
-// in progress
-if (ai = "circle"){
-    direction = (dirToFoe + ((90 + (orbitRange-distToFoe)) * orbitccwise));
-    if((distToFoe&lt;=(orbitRange+10))&amp;&amp; (dirToFoe= (clamp(dirToFoe+180, closest_Sub.direction+170, closest_Sub.direction+190)-180))){//blarg the angle doesn't work
-        ai = "chase";
+}else if (ai = "circle"){
+    direction = (dirToFoe + ((90 + clamp(orbitRange-distToFoe, 30, -30)) * orbitccwise));
+    difference  = (dirToFoe mod 360) - (closest_Sub.direction mod 360);
+    image_angle = direction;
+    if (difference &gt; 180)
+    {difference = 360 - difference;}
+    if((distToFoe&lt;=(orbitRange+10)) and (difference &lt;5)){
+        ai = "wait";
+        after_waiting = "chase";
+        alarm[1] = 20;
     }
     speed = orbitSpeed;
+}else if (ai = "wander"){
+    if ((x == targetx)and(y == targety)){
+    targetx = random_range(leftwander, rightwander);
+    targety = random_range(topwander, bottomwander);
+    ai = "wait";
+    after_waiting = "wander";
+    alarm[1] = 10;
+    }else if(distance_to_point(targetx, targety)&lt;wanderspeed){
+    x = targetx;
+    y = targety;
+    speed = 0;
+    }else{
+    direction = point_direction(x, y, targetx, targety)
+    speed = wanderspeed;}
+}else if (ai = "wait"){
+speed = 0;
 }
-        
 
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_light">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ai = "flee";
 </string>
           </argument>
         </arguments>
