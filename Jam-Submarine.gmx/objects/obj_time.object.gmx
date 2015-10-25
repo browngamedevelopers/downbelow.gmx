@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,16 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lightBrightness = .6;
-lightLength = 100;
-lightWidth = 20;
-lightColor = c_white;
+            <string>var time = 0;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -51,23 +48,11 @@ lightColor = c_white;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(lightColor);
-draw_set_alpha(lightBrightness);
-draw_set_blend_mode(bm_add);
+            <string>time =+ (1 / room_speed);
 
-var xOffset = 20;
-var yOffset = -10;
-
-var playerSub = instance_find(obj_Submarine, 0);
-
-d3d_transform_set_rotation_z(playerSub.image_angle);
-d3d_transform_add_translation(playerSub.x + xOffset, 
-                              playerSub.y + yOffset,0);
-draw_ellipse(0,0,lightLength,lightWidth,false);
-d3d_transform_set_identity();
-
-draw_set_alpha(1);
-draw_set_blend_mode(bm_normal);
+if (time = global.timeLimit) {
+    // Game over
+}
 </string>
           </argument>
         </arguments>

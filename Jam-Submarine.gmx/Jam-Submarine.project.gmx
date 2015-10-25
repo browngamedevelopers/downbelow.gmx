@@ -15,13 +15,16 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\obj_Submarine</object>
     <object>objects\obj_Ambient</object>
+    <object>objects\obj_Submarine</object>
     <object>objects\obj_enemy_fish</object>
     <object>objects\obj_light</object>
     <object>objects\obj_energy_bar</object>
+    <object>objects\obj_time</object>
+    <object>objects\obj_globalVar</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmLoad</room>
     <room>rooms\rmLevel1</room>
   </rooms>
   <help>

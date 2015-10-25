@@ -29,35 +29,9 @@
 beginEnergyY = 20;
 endEnergyX = 80;
 endEnergyY = 40;
-global.energy = 100;
 bgEnergyColor = c_black;
 lowEnergyColor = c_red;
 highEnergyColor = c_green;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if global.energy &lt;= 0 {
-    // Something!
-}
 </string>
           </argument>
         </arguments>
@@ -80,13 +54,13 @@ highEnergyColor = c_green;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_healthbar(
+            <string>energyObject = instance_find(obj_Submarine, 0);
+
+draw_healthbar(
 beginEnergyX, beginEnergyY,
-endEnergyX, endEnergyY, global.energy,
+endEnergyX, endEnergyY, energyObject.energy,
 bgEnergyColor, lowEnergyColor, highEnergyColor, 
 0, true, true);
-
-global.energy -= 1;
 </string>
           </argument>
         </arguments>
