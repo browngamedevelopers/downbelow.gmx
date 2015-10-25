@@ -149,8 +149,8 @@ if (ai = "chase"){
 }else if (ai = "wait"){
 speed = 0;
 }else if (ai = "wander"){
-    speed = min(wanderSpeed, distance_to_point(targetx, targety)
-    if((x=targetx) and (y= targety)){
+    speed = min(wanderSpeed, distance_to_point(targetx, targety));
+    if((x == targetx) and (y == targety)){
     targetx = random_range(leftx, rightx);
     targety = random_range(upy, downy);
     ai = "wait";
