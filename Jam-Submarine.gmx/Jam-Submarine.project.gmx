@@ -19,9 +19,7 @@
     <object>objects\obj_Ambient</object>
     <object>objects\obj_enemy_fish</object>
   </objects>
-  <rooms name="rooms">
-    <room>rooms\room2</room>
-  </rooms>
+  <rooms name="rooms"/>
   <help>
     <rtf>help.rtf</rtf>
   </help>
