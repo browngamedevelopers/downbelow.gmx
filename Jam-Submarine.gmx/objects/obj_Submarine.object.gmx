@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>var dead = false;
-var xoffset = abs(sin(direction)*sprite_width/2)
-var yoffset = abs(cos(direction)*sprite_width/2)
+var yoffset = abs(sin(direction*3.14/180)*sprite_width/2)
+var xoffset = abs(cos(direction*3.14/180)*sprite_width/2)
 
-if (x &gt; (room_width - xoffset) || x &lt; xoffset || y &gt; (room_height - yoffset) || y &lt; yoffset) {
+if (x &gt; (room_width - xoffset) || x &lt; xoffset) {
     //this stops the object from moving after it hits an edge
     speed = 0;
     sprite_index = sprSubmarineDeath;
