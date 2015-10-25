@@ -19,8 +19,11 @@
     <object>objects\objSubmarine</object>
     <object>objects\obj_Ambient</object>
     <object>objects\enemy_fish</object>
+    <object>objects\obj_light</object>
   </objects>
-  <rooms name="rooms"/>
+  <rooms name="rooms">
+    <room>rooms\rmLevel1</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
