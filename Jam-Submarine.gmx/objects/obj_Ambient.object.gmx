@@ -53,7 +53,7 @@
                                 way you can tell GameMaker:Studio to only draw
                                 specific things to the specified surface.*/
 
-draw_clear_alpha(c_black,0.85)//That line make the screen black with an alpha at 0.85
+draw_clear_alpha(c_black,0.7)//That line make the screen black with an alpha at 0.85
 draw_set_blend_mode(bm_subtract) //We're starting to substract here
 
 draw_set_alpha(1)//Important line to reset the alpha back to 1.
