@@ -75,10 +75,10 @@ fleeSpeed = 10;
             <kind>1</kind>
             <string>if (ai = "chase"){
   speed = chaseSpeed;
-  direction = point_direction(x, y, instance_nearest(x, y, obj_Submarine).x, instance_nearest(x, y, obj_Submarine.y);
+  direction = point_direction(x, y, instance_nearest(x, y, obj_Submarine).x, instance_nearest(x, y, obj_Submarine.y));
 }else if (ai = "flee"){
   speed = fleeSpeed;
-  direction = 180+point_direction(x, y, instance_nearest(x, y, obj_Submarine).x, instance_nearest(x, y, obj_Submarine.y);
+  direction = 180+point_direction(x, y, instance_nearest(x, y, obj_Submarine).x, instance_nearest(x, y, obj_Submarine.y));
   alarm[0] = 60;
 }
 </string>

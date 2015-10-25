@@ -15,7 +15,6 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\objSubmarine</object>
     <object>objects\obj_Ambient</object>
