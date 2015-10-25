@@ -134,6 +134,7 @@ if (ai = "chase"){
   alarm[0] = 60;
   image_angle = direction
   
+  
 }else if (ai = "circle"){
     direction = (dirToFoe + ((90 + (orbitRange-distToFoe)) * orbitccwise));
     retresult = (dirToFoe mod 360) - (closest_Sub.direction mod 360);
