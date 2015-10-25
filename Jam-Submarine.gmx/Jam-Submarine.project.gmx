@@ -15,12 +15,12 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\obj_Submarine</object>
     <object>objects\obj_Ambient</object>
     <object>objects\obj_light</object>
     <object>objects\obj_energy_bar</object>
+    <object>objects\obj_enemy_fish</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmLevel1</room>
