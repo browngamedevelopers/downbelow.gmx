@@ -77,11 +77,15 @@ speed = chaseSpeed;
             <string>if (ai = "chase"){
     direction = point_direction(x, y, instance_nearest(x, y, obj_Submarine).x, instance_nearest(x, y, obj_Submarine).y);
     speed = chaseSpeed;
+    image_angle = direction
 }else if (ai = "flee"){
   speed = fleeSpeed;
   direction = 180 + point_direction(x, y, instance_nearest(x, y, obj_Submarine).x, instance_nearest(x, y, obj_Submarine).y);
   alarm[0] = 60;
+  image_angle = direction
 }
+
+
 </string>
           </argument>
         </arguments>
