@@ -6,6 +6,8 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\sprSubmarineStill</sprite>
+    <sprite>sprites\sprSubmarineMove</sprite>
     <sprite>sprites\spr_Ambient</sprite>
     <sprite>sprites\player</sprite>
     <sprite>sprites\wall</sprite>
@@ -14,11 +16,13 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
+    <object>objects\objSubmarine</object>
     <object>objects\obj_Ambient</object>
     <object>objects\enemy_fish</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\rmLevel1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
