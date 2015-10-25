@@ -25,10 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ai = "chase";
+            <string>ai = "circle";
 chaseSpeed = 5;
 fleeSpeed = 10;
 speed = chaseSpeed;
+
+
+//Ideas
+/*
+Behavior: Circle around to back of foe, then attack. 
+
+*/
+orbitSpeed = 7;
+orbitRange = 50;
+orbitccwise = 1;
 
 </string>
           </argument>
@@ -77,6 +87,7 @@ speed = chaseSpeed;
             <kind>1</kind>
             <string>closest_Sub = instance_nearest(x, y, obj_Submarine);
 dirToFoe = point_direction(x, y, closest_Sub.x, closest_Sub.y);
+distToFoe = distance_to_object(closest_Sub);
 if (ai = "chase"){
     direction = dirToFoe;
     speed = chaseSpeed;
@@ -86,6 +97,15 @@ if (ai = "chase"){
   direction = 180 + dirToFoe;
   alarm[0] = 60;
   image_angle = direction
+  
+}
+// in progress
+if (ai = "circle"){
+    direction = (dirToFoe + ((90 + (orbitRange-distToFoe)) * orbitccwise));
+    if((distToFoe&lt;=(orbitRange+10))&amp;&amp; (dirToFoe= (clamp(dirToFoe+180, closest_Sub.direction+170, closest_Sub.direction+190)-180))){//blarg the angle doesn't work
+        ai = "chase";
+    }
+    speed = orbitSpeed;
 }
         
 
