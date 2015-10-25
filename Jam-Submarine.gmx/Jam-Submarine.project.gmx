@@ -9,16 +9,15 @@
     <sprite>sprites\sprSubmarineStill</sprite>
     <sprite>sprites\sprSubmarineMove</sprite>
     <sprite>sprites\spr_Ambient</sprite>
-    <sprite>sprites\player</sprite>
     <sprite>sprites\wall</sprite>
     <sprite>sprites\foe</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\objSubmarine</object>
+    <object>objects\obj_Submarine</object>
     <object>objects\obj_Ambient</object>
-    <object>objects\enemy_fish</object>
+    <object>objects\obj_enemy_fish</object>
   </objects>
   <rooms name="rooms"/>
   <help>
