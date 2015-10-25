@@ -19,6 +19,7 @@
     <object>objects\obj_Ambient</object>
     <object>objects\obj_enemy_fish</object>
     <object>objects\obj_light</object>
+    <object>objects\obj_energy_bar</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmLevel1</room>
