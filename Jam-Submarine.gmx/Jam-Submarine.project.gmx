@@ -7,12 +7,16 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_Ambient</sprite>
+    <sprite>sprites\player</sprite>
+    <sprite>sprites\wall</sprite>
+    <sprite>sprites\foe</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\obj_Ambient</object>
+    <object>objects\enemy_fish</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
