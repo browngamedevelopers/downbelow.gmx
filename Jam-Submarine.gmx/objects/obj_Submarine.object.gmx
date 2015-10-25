@@ -8,6 +8,37 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.view_visible[0]=true; //make view visible
+width=1024; //width of desired view
+height=768; //height of desired view
+
+//adjusting view width and height, as well as scale (port)
+global.view_wview[0]=width;
+global.view_hview[0]=height;
+global.view_wport[0]=width;
+global.view_hport[0]=height;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,11 +56,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var dead = false;
+            <string>//snap view x and y positions to object's coordinates, subtracting one-half the width and height to center it
+view_xview[0]=0;
+view_yview[0]=y-(view_hview[0]/2); 
+
+if (view_yview[0] &lt; 0) {
+    view_yview[0] = 0;
+}
+
+if (view_yview &gt; (room_height - 768)) {
+    view_yview[0] = room_height - 768;
+}
+
+var dead = false;
 var yoffset = abs(sin(direction*3.14/180)*sprite_width/2)
 var xoffset = abs(cos(direction*3.14/180)*sprite_width/2)
 
-if (x &gt; (room_width - xoffset) || x &lt; xoffset) {
+if (x &gt; (room_width - xoffset) || x &lt; xoffset || y &gt; (room_height - yoffset)|| y &lt; yoffset) {
     //this stops the object from moving after it hits an edge
     speed = 0;
     sprite_index = sprSubmarineDeath;
