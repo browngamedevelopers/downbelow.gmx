@@ -25,11 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lightBrightness = .5;
+            <string>lightBrightness = .6;
 lightLength = 100;
 lightWidth = 20;
 lightColor = c_white;
-roomDarkness = .1;
 </string>
           </argument>
         </arguments>
@@ -52,16 +51,22 @@ roomDarkness = .1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_black);
-draw_set_alpha(roomDarkness);
-draw_rectangle(0,0,room_width,room_height,false);
-
-draw_set_color(lightColor);
+            <string>draw_set_color(lightColor);
 draw_set_alpha(lightBrightness);
 draw_set_blend_mode(bm_add);
 
-d3d_transform_set_rotation_z(image_angle);
-d3d_transform_add_translation(mouse_x,mouse_y,0);
+var xOffset = 20;
+var yOffset = -10;
+
+var playerSub = instance_find(obj_Submarine, 0);
+
+show_debug_message(playerSub);
+
+show_debug_message(playerSub.x);
+
+d3d_transform_set_rotation_z(playerSub.image_angle);
+d3d_transform_add_translation(playerSub.x + xOffset, 
+                              playerSub.y + yOffset,0);
 draw_ellipse(0,0,lightLength,lightWidth,false);
 d3d_transform_set_identity();
 
