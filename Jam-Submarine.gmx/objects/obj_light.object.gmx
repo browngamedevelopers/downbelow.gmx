@@ -26,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>lightBrightness = .6;
-lightLength = 100;
-lightWidth = 20;
+lightDarkness = .3;
+lightLength = 250;
+lightWidth = 80;
 lightColor = c_white;
 </string>
           </argument>
@@ -55,17 +56,19 @@ lightColor = c_white;
 draw_set_alpha(lightBrightness);
 draw_set_blend_mode(bm_add);
 
-var xOffset = 20;
-var yOffset = -10;
-
+var offset = 22;
 var playerSub = instance_find(obj_Submarine, 0);
 
 d3d_transform_set_rotation_z(playerSub.image_angle);
-d3d_transform_add_translation(playerSub.x + xOffset, 
-                              playerSub.y + yOffset,0);
-draw_ellipse(0,0,lightLength,lightWidth,false);
+d3d_transform_add_translation(playerSub.x, 
+                              playerSub.y,0);
+//draw_ellipse(offset,-lightWidth/2,lightLength,lightWidth/2,false);
+draw_primitive_begin(pr_trianglelist);
+draw_vertex_colour(offset,0,lightColor,lightBrightness);
+draw_vertex_colour(offset+lightLength,-lightWidth/2,lightColor,lightDarkness);
+draw_vertex_colour(offset+lightLength,+lightWidth/2,lightColor,lightDarkness);
+draw_primitive_end();
 d3d_transform_set_identity();
-
 draw_set_alpha(1);
 draw_set_blend_mode(bm_normal);
 </string>

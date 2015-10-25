@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>beginEnergyX = 20;
-beginEnergyY = 20;
-endEnergyX = 80;
-endEnergyY = 40;
+            <string>beginEnergyXOffset = 20;
+beginEnergyYOffset = 20;
+endEnergyXOffset = 80;
+endEnergyYOffset = 40;
 bgEnergyColor = c_black;
 lowEnergyColor = c_red;
 highEnergyColor = c_green;
@@ -54,11 +54,9 @@ highEnergyColor = c_green;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>energyObject = instance_find(obj_Submarine, 0);
-
-draw_healthbar(
-beginEnergyX, beginEnergyY,
-endEnergyX, endEnergyY, energyObject.energy,
+            <string>draw_healthbar(
+view_xview[0] + beginEnergyXOffset, view_yview[0] + beginEnergyYOffset,
+view_xview[0] + endEnergyXOffset, view_yview[0] + endEnergyYOffset, global.playerSub.energy,
 bgEnergyColor, lowEnergyColor, highEnergyColor, 
 0, true, true);
 </string>

@@ -40,6 +40,42 @@ orbitSpeed = 7;
 orbitRange = 50;
 orbitccwise = 1;
 
+//waiting to do something else, use alarm 1.
+next_action = "chase";
+
+//wandering
+wanderSpeed = 4;
+width = 10;
+height = 10;
+targetx = x;
+targety = y;
+leftx = x -width/2;
+rightx = x+ width/2;
+upy = y-height/2;
+downy= y+height/2;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ai = next_action
 </string>
           </argument>
         </arguments>
@@ -98,14 +134,29 @@ if (ai = "chase"){
   alarm[0] = 60;
   image_angle = direction
   
-}
-// in progress
-if (ai = "circle"){
+}else if (ai = "circle"){
     direction = (dirToFoe + ((90 + (orbitRange-distToFoe)) * orbitccwise));
-    if((distToFoe&lt;=(orbitRange+10))&amp;&amp; (dirToFoe= (clamp(dirToFoe+180, closest_Sub.direction+170, closest_Sub.direction+190)-180))){//blarg the angle doesn't work
-        ai = "chase";
+    retresult = (dirToFoe mod 360) - (closest_Sub.direction mod 360);
+    if (retresult &gt; 180)
+     retresult = 360 - retresult;
+    if((distToFoe&lt;=(orbitRange+10)) and (retresult&lt;5)){//blarg the angle doesn't work
+        ai = "wait";
+        next_action = "chase";
+        direction = dirToFoe;
+        alarm[1] = 10;
     }
     speed = orbitSpeed;
+}else if (ai = "wait"){
+speed = 0;
+}else if (ai = "wander"){
+    speed = min(wanderSpeed, distance_to_point(targetx, targety));
+    if((x == targetx) and (y == targety)){
+    targetx = random_range(leftx, rightx);
+    targety = random_range(upy, downy);
+    ai = "wait";
+        next_action = "wander";
+        direction = point_direction(x, y, targetx, targety);
+        alarm[1] = 10;}
 }
         
 
