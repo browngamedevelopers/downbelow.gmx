@@ -3,7 +3,7 @@
   <spriteName>sprSubmarineStill</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -37,7 +37,78 @@ global.view_hview[0]=height;
 global.view_wport[0]=width;
 global.view_hport[0]=height;
 
-energy = global.energyMax;
+energy = global.energyMax+1000000;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Light variables
+
+lightBrightness = .6;
+lightDarkness = .3;
+lightLength = 250;
+lightAngle = 15;
+lightColor = c_white;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Lighting
+surface_set_target(global.ambientLightIndex)
+draw_set_color(lightColor);
+draw_set_alpha(lightBrightness);
+draw_set_blend_mode(bm_subtract);
+
+var offset = 22;
+var playerSub = instance_find(obj_Submarine, 0);
+
+
+draw_primitive_begin(pr_trianglelist);
+
+draw_vertex_colour(x+lengthdir_x(offset,image_angle),y+lengthdir_y(offset,image_angle),lightColor,lightBrightness);
+draw_vertex_colour(x+lengthdir_x(lightLength,image_angle-lightAngle),y+lengthdir_y(lightLength,image_angle - lightAngle),lightColor,lightDarkness);
+draw_vertex_colour(x+lengthdir_x(lightLength,image_angle+lightAngle),y+lengthdir_y(lightLength,image_angle + lightAngle),lightColor,lightDarkness);
+
+draw_primitive_end();
+draw_set_alpha(1);
+draw_set_blend_mode(bm_normal);
+surface_reset_target();
+
+
 </string>
           </argument>
         </arguments>
@@ -80,7 +151,7 @@ if (x &gt; (room_width - xoffset) || x &lt; xoffset || y &gt; (room_height - yof
     //this stops the object from moving after it hits an edge
     speed = 0;
     sprite_index = sprSubmarineDeath;
-    dead = true;
+    //dead = true;
 }
 
 if (!dead) {
@@ -138,6 +209,59 @@ if (!dead) {
 if ((keyboard_check(vk_right) || keyboard_check(vk_down)) &amp;&amp; (energy &gt; 0)) {
     energy -= global.moveEnergyDecrease / room_speed;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+
+draw_set_color(lightColor);
+draw_set_alpha(lightBrightness);
+draw_set_blend_mode(bm_add);
+
+var offset = 22;
+
+var playerSub = instance_find(obj_Submarine, 0);
+
+/*Let's reserve d3d calls for 3D drawing; Fun fact: I can't believe they didn't change
+the prefix for DIRECT 3D...*/
+//d3d_transform_set_rotation_z(playerSub.image_angle);
+//d3d_transform_add_translation(playerSub.x, 
+//                              playerSub.y,0);
+//draw_ellipse(offset,-lightWidth/2,lightLength,lightWidth/2,false);
+
+
+
+draw_primitive_begin(pr_trianglelist);
+
+draw_vertex_colour(x+lengthdir_x(offset,image_angle),y+lengthdir_y(offset,image_angle),lightColor,lightBrightness);
+draw_vertex_colour(x+lengthdir_x(lightLength,image_angle-lightAngle),y+lengthdir_y(lightLength,image_angle - lightAngle),lightColor,lightDarkness);
+draw_vertex_colour(x+lengthdir_x(lightLength,image_angle+lightAngle),y+lengthdir_y(lightLength,image_angle + lightAngle),lightColor,lightDarkness);
+draw_primitive_end();
+
+
+
+//d3d_transform_set_identity();
+draw_set_alpha(1);
+draw_set_blend_mode(bm_normal);
 </string>
           </argument>
         </arguments>
