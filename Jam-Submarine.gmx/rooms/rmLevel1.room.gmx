@@ -85,6 +85,7 @@
     <instance objName="obj_dummy" x="736" y="1760" name="inst_B7BE6908" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dummy" x="640" y="416" name="inst_CF8D2CC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dummy" x="288" y="416" name="inst_7A468B34" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fish" x="768" y="672" name="inst_82AA1C07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
