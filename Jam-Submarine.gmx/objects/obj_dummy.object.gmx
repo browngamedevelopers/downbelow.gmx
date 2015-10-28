@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0.2;
+image_xscale = 0.25;
+image_yscale = 0.25;
 </string>
           </argument>
         </arguments>
@@ -43,5 +45,8 @@
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>152,144</point>
+    <point>152,152</point>
+  </PhysicsShapePoints>
 </object>

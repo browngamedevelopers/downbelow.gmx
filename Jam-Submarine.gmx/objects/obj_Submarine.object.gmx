@@ -38,6 +38,9 @@ global.view_wport[0]=width;
 global.view_hport[0]=height;
 
 energy = global.energyMax+1000000;
+
+image_xscale = 0.05;
+image_yscale = 0.05;
 </string>
           </argument>
         </arguments>
@@ -279,5 +282,8 @@ draw_set_blend_mode(bm_normal);
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>1000,974</point>
+    <point>1000,1000</point>
+  </PhysicsShapePoints>
 </object>

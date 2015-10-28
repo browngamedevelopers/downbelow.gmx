@@ -22,6 +22,8 @@
     <option_android_build_version>0</option_android_build_version>
     <option_android_color_depth>0</option_android_color_depth>
     <option_android_display_name>Jam-Submarine</option_android_display_name>
+    <option_android_flurry_enable>false</option_android_flurry_enable>
+    <option_android_flurry_id></option_android_flurry_id>
     <option_android_google_analytics_enable>false</option_android_google_analytics_enable>
     <option_android_google_play>false</option_android_google_play>
     <option_android_google_play_id></option_android_google_play_id>
